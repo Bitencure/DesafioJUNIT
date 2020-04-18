@@ -1,7 +1,11 @@
 import static org.junit.jupiter.api.Assertions.*;
+
+
 import org.junit.jupiter.api.Test;
 
 class TesteJulgamentoPrisioneiro {
+	
+	Julgamento julgamento = new Julgamento();
 	
 	@Test
 	void calculaPenaTest() {
@@ -15,31 +19,33 @@ class TesteJulgamentoPrisioneiro {
 		respostaPrisioneiroA = "Culpado";
 		respostaPrisioneiroB = "Culpado";
 		resultadoEsperado = 5;
-		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		resultadoAtual = julgamento.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
 		assertEquals(resultadoEsperado, resultadoAtual);
 		
 		
 		respostaPrisioneiroA = "Culpado";
 		respostaPrisioneiroB = "Inocente";
 		resultadoEsperado = 10;
-		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		resultadoAtual = julgamento.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
 		assertEquals(resultadoEsperado, resultadoAtual);
 		
 		respostaPrisioneiroA = "Inocente";
 		respostaPrisioneiroB = "Culpado";
 		resultadoEsperado = 1;
-		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		resultadoAtual = julgamento.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
 		assertEquals(resultadoEsperado, resultadoAtual);
 		
 		respostaPrisioneiroA = "Inocente";
 		respostaPrisioneiroB = "Inocente";
 		resultadoEsperado = 0;
-		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		resultadoAtual = julgamento.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
 		assertEquals(resultadoEsperado, resultadoAtual);
 		
 		
 		
 	}
+
+
 
 }
 
@@ -52,7 +58,11 @@ java.lang.Error: Unresolved compilation problems:
 
 O ERRO FOI DADO POIS NAO EXISTE OBJETO DO TIPO RESPOSTA
 ----------
+SEGUNDO TESTE: org.opentest4j.AssertionFailedError: expected: <5> but was: <15>
 
+INSTANCIEI A CLASSE NO JUNIT, FALTAM CORRIGIR OS ERROS DE LOGICA PRA APLICAR A PENA CORRETAMENTE
+
+---
 
 
 
