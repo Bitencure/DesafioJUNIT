@@ -1,0 +1,59 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class TesteJulgamentoPrisioneiro {
+	
+	@Test
+	void calculaPenaTest() {
+		
+		int resultadoEsperado;
+		int resultadoAtual;
+		
+		String respostaPrisioneiroA;
+		String respostaPrisioneiroB;
+		
+		respostaPrisioneiroA = "Culpado";
+		respostaPrisioneiroB = "Culpado";
+		resultadoEsperado = 5;
+		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		assertEquals(resultadoEsperado, resultadoAtual);
+		
+		
+		respostaPrisioneiroA = "Culpado";
+		respostaPrisioneiroB = "Inocente";
+		resultadoEsperado = 10;
+		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		assertEquals(resultadoEsperado, resultadoAtual);
+		
+		respostaPrisioneiroA = "Inocente";
+		respostaPrisioneiroB = "Culpado";
+		resultadoEsperado = 1;
+		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		assertEquals(resultadoEsperado, resultadoAtual);
+		
+		respostaPrisioneiroA = "Inocente";
+		respostaPrisioneiroB = "Inocente";
+		resultadoEsperado = 0;
+		resultadoAtual = calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);		
+		assertEquals(resultadoEsperado, resultadoAtual);
+		
+		
+		
+	}
+
+}
+
+--- PRIMEIRO TESTE ---
+java.lang.Error: Unresolved compilation problems: 
+	The method calculaPena(Resposta, Resposta) from the type Julgamento refers to the missing type Resposta
+	The method calculaPena(Resposta, Resposta) from the type Julgamento refers to the missing type Resposta
+	The method calculaPena(Resposta, Resposta) from the type Julgamento refers to the missing type Resposta
+	The method calculaPena(Resposta, Resposta) from the type Julgamento refers to the missing type Resposta
+
+O ERRO FOI DADO POIS NAO EXISTE OBJETO DO TIPO RESPOSTA
+----------
+
+
+
+
+RM81488 - MATHEUS BITENCOURT GOMES
